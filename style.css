@@ -27,7 +27,10 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background:
+        radial-gradient(circle at 20% 15%, rgba(217, 70, 239, 0.28), transparent 30%),
+        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.22), transparent 28%),
+        linear-gradient(180deg, #3a0b4f 0%, #220225 45%, #050505 100%);
     color: var(--text-primary);
     font-family: var(--font-sans);
     direction: rtl;
@@ -91,14 +94,14 @@ h1, h2, h3, h4 {
 
 /* Layout */
 header {
-    padding-top: 6rem;
+    padding-top: 3rem;
     padding-bottom: 5rem;
     padding-left: 1rem;
     padding-right: 1rem;
     position: relative;
     overflow: hidden;
+    background: radial-gradient(circle at 50% 0%, rgba(217, 70, 239, 0.18), transparent 45%);
 }
-
 main {
     max-width: 64rem; /* 5xl */
     margin: 0 auto;
@@ -176,20 +179,20 @@ main {
 
 /* Logo Styles */
 .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
     position: relative;
-    display: inline-block;
-    cursor: pointer;
-    margin-bottom: 3rem;
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
 }
 
 .logo-content {
-    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 
 .logo-icon-wrapper {
@@ -235,16 +238,15 @@ main {
 .logo-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .logo-name {
-    font-size: 1.875rem;
-    font-weight: 900;
-    letter-spacing: -0.05em;
-    color: white;
-    text-shadow: 0 0 15px rgba(192, 38, 211, 0.5);
-    transition: color 0.5s;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1;
+    letter-spacing: 0.5px;
 }
 
 .logo-container:hover .logo-name {
@@ -252,10 +254,10 @@ main {
 }
 
 .logo-subtitle {
-    font-size: 0.625rem;
-    font-weight: 700;
-    letter-spacing: 0.4em;
-    color: rgba(232, 121, 249, 0.8);
+    color: #d38cff;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
