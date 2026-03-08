@@ -15,7 +15,7 @@
     --slate-900: #0f172a;
     --indigo-600: #4f46e5;
     --indigo-500: #6366f1;
-    
+
     --font-sans: 'Inter', system-ui, sans-serif;
     --font-serif: 'Cormorant Garamond', serif;
 }
@@ -26,16 +26,35 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background:
-        radial-gradient(circle at 20% 15%, rgba(217, 70, 239, 0.28), transparent 30%),
-        radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.22), transparent 28%),
-        linear-gradient(180deg, #3a0b4f 0%, #220225 45%, #050505 100%);
     color: var(--text-primary);
     font-family: var(--font-sans);
     direction: rtl;
     overflow-x: hidden;
     min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(184, 79, 255, 0.38) 0%, rgba(184, 79, 255, 0.24) 16%, rgba(184, 79, 255, 0.12) 30%, transparent 52%),
+        radial-gradient(circle at 18% 12%, rgba(232, 121, 249, 0.16) 0%, transparent 26%),
+        radial-gradient(circle at 82% 18%, rgba(168, 85, 247, 0.13) 0%, transparent 24%),
+        linear-gradient(180deg, #56197a 0%, #3b0f56 18%, #240a35 42%, #120717 72%, #050505 100%);
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    border: 1px solid rgba(217, 70, 239, 0.28);
+    box-shadow:
+        inset 0 0 0 1px rgba(232, 121, 249, 0.08),
+        inset 0 0 90px rgba(168, 85, 247, 0.08);
+    z-index: 9999;
 }
 
 /* Typography */
@@ -45,19 +64,21 @@ h1, h2, h3, h4 {
 
 .main-title {
     font-family: var(--font-serif);
-    font-size: 3.75rem; /* 6xl */
+    font-size: 3.75rem;
     font-weight: 900;
     letter-spacing: -0.05em;
     text-align: center;
     margin-bottom: 3rem;
     margin-top: 4rem;
-    text-shadow: 0 0 30px rgba(192, 38, 211, 0.4);
-}
-
-@media (min-width: 768px) {
-    .main-title {
-        font-size: 6rem; /* 8xl */
-    }
+    color: #ffffff;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.16),
+        0 0 24px rgba(217, 70, 239, 0.26),
+        0 0 44px rgba(168, 85, 247, 0.22);
+    animation: titleFloat 4.8s ease-in-out infinite;
+    will-change: transform;
+    position: relative;
+    z-index: 2;
 }
 
 .subtitle {
@@ -79,8 +100,8 @@ h1, h2, h3, h4 {
 }
 
 @media (min-width: 768px) {
-    .section-title {
-        font-size: 3rem;
+    .main-title {
+        font-size: 6rem;
     }
 }
 
@@ -100,10 +121,12 @@ header {
     padding-right: 1rem;
     position: relative;
     overflow: hidden;
-    background: radial-gradient(circle at 50% 0%, rgba(217, 70, 239, 0.18), transparent 45%);
+    background:
+        radial-gradient(circle at 50% 0%, rgba(217, 70, 239, 0.16), transparent 42%);
 }
+
 main {
-    max-width: 64rem; /* 5xl */
+    max-width: 64rem;
     margin: 0 auto;
     padding: 0 1rem 8rem 1rem;
     display: flex;
@@ -187,31 +210,58 @@ main {
     z-index: 10;
     opacity: 1;
     visibility: visible;
+    transition: filter 0.35s ease, transform 0.35s ease;
 }
 
 .logo-content {
     display: flex;
     align-items: center;
     gap: 1rem;
+    position: relative;
+}
+
+.logo-glow {
+    position: absolute;
+    inset: auto;
+    width: 18rem;
+    height: 6rem;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(217, 70, 239, 0.12) 0%, transparent 70%);
+    filter: blur(28px);
+    pointer-events: none;
 }
 
 .logo-icon-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 0.75rem;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border-radius: 1.35rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25),
+        inset 0 0 24px rgba(217, 70, 239, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.logo-icon-bg {
+    position: absolute;
+    inset: 0.4rem;
+    border-radius: 1rem;
+    background: radial-gradient(circle at 30% 30%, rgba(232, 121, 249, 0.18), rgba(168, 85, 247, 0.06) 55%, transparent 80%);
+    pointer-events: none;
 }
 
 .logo-icon {
-    width: 3rem;
-    height: 3rem;
+    width: 2.15rem;
+    height: 2.15rem;
     color: var(--fuchsia-400);
     transition: all 0.5s;
-}
-
-.logo-container:hover .logo-icon {
-    color: var(--fuchsia-300);
+    position: relative;
+    z-index: 2;
 }
 
 .sparkle-wrapper {
@@ -219,20 +269,21 @@ main {
     top: -0.25rem;
     right: -0.25rem;
     animation: pulse 3s infinite;
+    z-index: 3;
 }
 
 .sparkle-icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1.05rem;
+    height: 1.05rem;
     color: var(--yellow-400);
 }
 
 .logo-divider {
-    height: 2.5rem;
+    height: 2.9rem;
     width: 1px;
-    background: linear-gradient(to bottom, transparent, #334155, transparent);
-    margin: 0 1rem;
-    display: none; /* Hidden on mobile, flex on desktop if needed */
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.28), transparent);
+    margin: 0 0.85rem;
+    display: none;
 }
 
 .logo-text {
@@ -242,15 +293,18 @@ main {
 }
 
 .logo-name {
-    color: #ffffff;
-    font-weight: 800;
-    font-size: 2rem;
-    line-height: 1;
-    letter-spacing: 0.5px;
-}
-
-.logo-container:hover .logo-name {
-    color: #f5d0fe;
+    font-size: 1.875rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    color: white;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.08),
+        0 0 18px rgba(192, 38, 211, 0.28);
+    transition:
+        color 0.35s ease,
+        text-shadow 0.35s ease,
+        transform 0.35s ease,
+        filter 0.35s ease;
 }
 
 .logo-subtitle {
@@ -259,6 +313,40 @@ main {
     margin-top: 0.35rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: color 0.35s ease, text-shadow 0.35s ease;
+}
+
+.logo-container:hover {
+    filter: drop-shadow(0 0 10px rgba(232, 121, 249, 0.24))
+            drop-shadow(0 0 24px rgba(217, 70, 239, 0.18));
+}
+
+.logo-container:hover .logo-name {
+    color: #fff7ff;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.18),
+        0 0 18px rgba(244, 114, 182, 0.34),
+        0 0 30px rgba(217, 70, 239, 0.42),
+        0 0 46px rgba(168, 85, 247, 0.28);
+    transform: translateY(-1px) scale(1.015);
+}
+
+.logo-container:hover .logo-subtitle {
+    color: #f5b3ff;
+    text-shadow: 0 0 14px rgba(232, 121, 249, 0.30);
+}
+
+.logo-container:hover .logo-icon-wrapper {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.28),
+        inset 0 0 24px rgba(217, 70, 239, 0.12),
+        0 0 18px rgba(217, 70, 239, 0.18);
+}
+
+.logo-container:hover .logo-icon {
+    color: #f3b7ff;
+    filter: drop-shadow(0 0 10px rgba(217, 70, 239, 0.38));
 }
 
 /* Intro Card */
@@ -283,7 +371,7 @@ main {
 }
 
 .organic-card:hover .card-gradient-border {
-    background: linear-gradient(to bottom, var(--fuchsia-400), var(--purple-400), var(--yellow-400));
+    background: linear-gradient(to bottom, var(--fuchsia-400), var(--purple-500), var(--yellow-400));
 }
 
 .intro-title {
@@ -418,6 +506,10 @@ main {
         flex-direction: row;
         align-items: center;
         padding: 2.5rem;
+    }
+
+    .logo-divider {
+        display: block;
     }
 }
 
@@ -560,7 +652,7 @@ main {
     background: var(--yellow-500);
 }
 
-/* Extension Details (Accordion) */
+/* Extension Details */
 .extension-details {
     max-height: 0;
     opacity: 0;
@@ -571,7 +663,7 @@ main {
 }
 
 .extension-details.open {
-    max-height: 1000px; /* Arbitrary large height */
+    max-height: 1000px;
     opacity: 1;
 }
 
@@ -825,6 +917,12 @@ footer {
 @keyframes pulse {
     0%, 100% { transform: scale(1); opacity: 0.5; }
     50% { transform: scale(1.2); opacity: 1; }
+}
+
+@keyframes titleFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-9px); }
+    100% { transform: translateY(0px); }
 }
 
 /* Glows */
