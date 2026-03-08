@@ -239,18 +239,20 @@ main {
 .logo-content {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0.85rem;
     position: relative;
+    flex-direction: row-reverse;
 }
 
 .logo-glow {
     position: absolute;
     inset: auto;
-    width: 18rem;
-    height: 6rem;
+    width: 16rem;
+    height: 5rem;
     border-radius: 999px;
     background: radial-gradient(circle, rgba(217, 70, 239, 0.12) 0%, transparent 70%);
-    filter: blur(28px);
+    filter: blur(26px);
     pointer-events: none;
 }
 
@@ -259,28 +261,29 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 4.4rem;
-    height: 4.4rem;
-    border-radius: 1.35rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 1.1rem;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.06);
     box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.25),
-        inset 0 0 24px rgba(217, 70, 239, 0.08);
+        0 8px 20px rgba(0, 0, 0, 0.22),
+        inset 0 0 20px rgba(217, 70, 239, 0.08);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+    flex-shrink: 0;
 }
 
 .logo-icon-bg {
     position: absolute;
-    inset: 0.4rem;
-    border-radius: 1rem;
+    inset: 0.35rem;
+    border-radius: 0.9rem;
     background: radial-gradient(circle at 30% 30%, rgba(232, 121, 249, 0.18), rgba(168, 85, 247, 0.06) 55%, transparent 80%);
     pointer-events: none;
 }
 
 .logo-icon {
-    width: 2.15rem;
-    height: 2.15rem;
+    width: 1.85rem;
+    height: 1.85rem;
     color: var(--fuchsia-400);
     transition: all 0.5s;
     position: relative;
@@ -289,54 +292,59 @@ main {
 
 .sparkle-wrapper {
     position: absolute;
-    top: -0.25rem;
-    right: -0.25rem;
+    top: -0.2rem;
+    right: -0.2rem;
     animation: pulse 3s infinite;
     z-index: 3;
 }
 
 .sparkle-icon {
-    width: 1.05rem;
-    height: 1.05rem;
+    width: 0.95rem;
+    height: 0.95rem;
     color: var(--yellow-400);
 }
 
 .logo-divider {
-    height: 2.9rem;
+    height: 2.3rem;
     width: 1px;
-    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.28), transparent);
-    margin: 0 0.85rem;
-    display: none;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.22), transparent);
+    margin: 0 0.15rem;
+    display: block;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.1;
+    text-align: center;
 }
 
 .logo-name {
-    font-size: 1.875rem;
+    font-size: 2.4rem;
     font-weight: 900;
-    letter-spacing: -0.05em;
+    letter-spacing: -0.04em;
     color: white;
     text-shadow:
-        0 0 10px rgba(255, 255, 255, 0.08),
-        0 0 18px rgba(192, 38, 211, 0.28);
+        0 0 10px rgba(255, 255, 255, 0.10),
+        0 0 18px rgba(192, 38, 211, 0.22);
     transition:
         color 0.35s ease,
         text-shadow 0.35s ease,
         transform 0.35s ease,
         filter 0.35s ease;
+    display: block;
 }
 
 .logo-subtitle {
     color: #d38cff;
-    font-size: 0.8rem;
-    margin-top: 0.35rem;
-    letter-spacing: 2px;
+    font-size: 0.72rem;
+    margin-top: 0.2rem;
+    letter-spacing: 2.2px;
     text-transform: uppercase;
     transition: color 0.35s ease, text-shadow 0.35s ease;
+    white-space: nowrap;
 }
 
 .logo-container:hover {
@@ -536,10 +544,6 @@ main {
         flex-direction: row;
         align-items: center;
         padding: 2.5rem;
-    }
-
-    .logo-divider {
-        display: block;
     }
 }
 
@@ -908,6 +912,14 @@ footer {
     text-transform: uppercase;
 }
 
+.footer-rights {
+    margin-top: 0.85rem;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
 /* Scroll to Top */
 .scroll-top-btn {
     position: fixed;
@@ -1071,12 +1083,4 @@ footer {
     width: 0.625rem;
     background: #fef9c3;
     border-radius: 0.125rem;
-}
-
-.footer-rights {
-    margin-top: 0.85rem;
-    color: rgba(255, 255, 255, 0.62);
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 0.02em;
 }
