@@ -10,47 +10,575 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-bg': '#0f172a',
-                        'card-bg': '#1e293b',
-                        'card-border': '#334155',
-                        'accent': '#818cf8',
-                    },
-                    fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Babel for JSX -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!-- Import Map for React & Libraries -->
-    <script type="importmap">
-    {
-        "imports": {
-            "react": "https://esm.sh/react@18.2.0",
-            "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-            "lucide-react": "https://esm.sh/lucide-react@0.292.0",
-            "framer-motion": "https://esm.sh/framer-motion@10.16.4"
-        }
-    }
-    </script>
 </head>
-<body class="bg-[#050505] text-slate-200 font-sans selection:bg-fuchsia-500/30 relative overflow-x-hidden min-h-screen">
-    <div id="root"></div>
-    <script type="text/babel" data-type="module" src="script.js"></script>
+<body>
+    <!-- Background Particles -->
+    <div class="particles-container">
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+        <div class="particle p5"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-glow"></div>
+        
+        <!-- Logo -->
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <div class="logo-content">
+                <div class="logo-icon-wrapper">
+                    <div class="logo-icon-bg"></div>
+                    <i data-lucide="brain-circuit" class="logo-icon"></i>
+                    <div class="sparkle-wrapper">
+                        <i data-lucide="sparkles" class="sparkle-icon"></i>
+                    </div>
+                </div>
+                <div class="logo-divider"></div>
+                <div class="logo-text">
+                    <span class="logo-name">SHIMRIT COHEN SHAY</span>
+                    <span class="logo-subtitle">AI Innovation & Magic</span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="main-title">קצת יותר ל NotebookLM</h1>
+        
+        <div class="intro-card-wrapper">
+            <div class="organic-card intro-card">
+                <div class="card-gradient-border"></div>
+                <h2 class="intro-title">
+                    <i data-lucide="info" class="icon-md"></i>
+                    מה זה בכלל NotebookLM?
+                </h2>
+                <p class="intro-text">
+                    NotebookLM הוא עוזר מחקר מבוסס בינה מלאכותית מבית גוגל. בניגוד לצ'אטבוטים רגילים, הוא <span class="highlight">מתמקד אך ורק במקורות המידע שאתם מעלים אליו</span> (מסמכים, קישורים, סרטוני יוטיוב), מה שמאפשר לו לתת תשובות מדויקות, מבוססות עובדות וללא "הזיות" של ה-AI. זהו הכלי המושלם ללמידה עמוקה, ניתוח נתונים ויצירת תובנות מורכבות.
+                </p>
+            </div>
+        </div>
+
+        <p class="subtitle">
+            הכלים והשיטות שיהפכו את המחקר שלכם למסע מרתק, מסודר ויעיל פי כמה.
+        </p>
+    </header>
+
+    <main>
+        <!-- How to Start Section -->
+        <section class="section-spacing">
+            <div class="section-header">
+                <div class="bg-glow bg-fuchsia"></div>
+                <h2 class="section-title">איך מתחילים? המסלול המהיר</h2>
+                <p class="section-subtitle">ארבעה צעדים פשוטים בדרך למחקר חכם ומדויק</p>
+            </div>
+
+            <div class="grid-4">
+                <!-- Step 1 -->
+                <div class="organic-card step-card">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon-bg">
+                            <i data-lucide="lightbulb" class="step-icon"></i>
+                        </div>
+                        <div class="step-number">1</div>
+                    </div>
+                    <h3 class="card-title">יוצרים מחברת</h3>
+                    <p class="card-text">פתחו מחברת חדשה ב-NotebookLM ותנו לה שם לפרויקט.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="organic-card step-card">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon-bg">
+                            <i data-lucide="upload" class="step-icon"></i>
+                        </div>
+                        <div class="step-number">2</div>
+                    </div>
+                    <h3 class="card-title">מעלים מקורות</h3>
+                    <p class="card-text">השתמשו בתוספים כדי לייבא מאמרים, סרטונים ומסמכים.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="organic-card step-card">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon-bg">
+                            <i data-lucide="message-square" class="step-icon"></i>
+                        </div>
+                        <div class="step-number">3</div>
+                    </div>
+                    <h3 class="card-title">חוקרים ושואלים</h3>
+                    <p class="card-text">שאלו את המודל שאלות על המידע שהעליתם וקבלו תשובות מדויקות.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="organic-card step-card">
+                    <div class="step-icon-wrapper">
+                        <div class="step-icon-bg">
+                            <i data-lucide="zap" class="step-icon"></i>
+                        </div>
+                        <div class="step-number">4</div>
+                    </div>
+                    <h3 class="card-title">מפיקים תובנות</h3>
+                    <p class="card-text">בחלון הסטודיו תוכלו ליצור פודקאסט, אינפורגרפיקה, דוחות, בוחן, מצגת, מפת חשיבה ועוד.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extensions Section -->
+        <section class="section-spacing">
+            <div class="extensions-header">
+                <h2 class="section-title-sm">תוספים שימושיים</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="grid-1 gap-lg">
+                <!-- Extension 1: Importer -->
+                <div class="organic-card extension-card" id="ext-importer">
+                    <div class="extension-main">
+                        <div class="extension-icon-wrapper bg-slate-900">
+                            <span class="extension-letter">N</span>
+                        </div>
+                        <div class="extension-content">
+                            <div class="extension-titles">
+                                <h3 class="extension-name">גשר המידע למחברת</h3>
+                                <p class="extension-original-name">NotebookLM Web Importer</p>
+                            </div>
+                            <p class="extension-desc">הופך כל דף אינטרנט או מאמר לחלק מהמחקר שלכם ברגע, בלי העתקות מיותרות.</p>
+                            
+                            <div class="extension-meta">
+                                <div class="badge badge-users">
+                                    <i data-lucide="users" class="icon-sm"></i>
+                                    <span>+100,000 משתמשים</span>
+                                </div>
+                                <div class="badge badge-rating">
+                                    <i data-lucide="star" class="icon-sm fill-yellow"></i>
+                                    <span>4.8</span>
+                                </div>
+                                <div class="spacer"></div>
+                                <div class="extension-actions">
+                                    <button class="btn-outline toggle-btn" onclick="toggleExtension('ext-importer')">
+                                        <i data-lucide="info" class="icon-sm"></i>
+                                        <span class="btn-text">איך זה עובד?</span>
+                                    </button>
+                                    <a href="https://chromewebstore.google.com/detail/notebooklm-web-importer/ijdefdijdmghafocfmmdojfghnpelnfn" target="_blank" class="btn-primary">
+                                        <span>התקנה מהירה</span>
+                                        <i data-lucide="external-link" class="icon-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extension-details">
+                        <div class="details-grid">
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="check-circle-2" class="icon-md text-fuchsia"></i> מהות הכלי</h4>
+                                    <p>תוסף עוצמתי המאפשר להוסיף מקורות מידע ל-NotebookLM ישירות מהדפדפן. בין אם מדובר במאמר ארוך, פוסט בבלוג או רשימת קישורים - הכל נכנס למחברת בלחיצה אחת.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="zap" class="icon-md text-fuchsia"></i> איך משתמשים?</h4>
+                                    <p>בזמן שאתם קוראים מאמר מעניין, פשוט לחצו על האייקון, בחרו את המחברת המתאימה, והתוכן יישאב פנימה באופן אוטומטי.</p>
+                                </div>
+                            </div>
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="help-circle" class="icon-md text-fuchsia"></i> הערך המוסף</h4>
+                                    <p>חוסך את הצורך המתיש בהעתקה והדבקה ידנית של טקסטים וקישורים, ומאפשר בניית בסיס ידע מהירה.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="target" class="icon-md text-fuchsia"></i> קהל יעד</h4>
+                                    <p>סטודנטים, חוקרים וכל מי שרוצה לרכז מידע מהרשת למקום אחד מסודר.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extension 2: YouTube -->
+                <div class="organic-card extension-card" id="ext-youtube">
+                    <div class="extension-main">
+                        <div class="extension-icon-wrapper bg-red-600">
+                            <div class="yt-icon">
+                                <svg viewBox="0 0 24 24" class="svg-icon">
+                                    <path d="M5 17c0-3.866 3.134-7 7-7s7 3.134 7 7" stroke-linecap="round" />
+                                    <path d="M8 17c0-2.209 1.791-4 4-4s4 1.791 4 4" stroke-linecap="round" />
+                                    <path d="M11 17c0-.552.448-1 1-1s1 .448 1 1" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="extension-content">
+                            <div class="extension-titles">
+                                <h3 class="extension-name">גשר הווידאו למחברת</h3>
+                                <p class="extension-original-name">YouTube to NotebookLM</p>
+                            </div>
+                            <p class="extension-desc">חיבור ישיר בין עולם הווידאו של יוטיוב למחברות החכמות שלכם.</p>
+                            
+                            <div class="extension-meta">
+                                <div class="badge badge-users">
+                                    <i data-lucide="users" class="icon-sm"></i>
+                                    <span>+100,000 משתמשים</span>
+                                </div>
+                                <div class="badge badge-rating">
+                                    <i data-lucide="star" class="icon-sm fill-yellow"></i>
+                                    <span>4.9</span>
+                                </div>
+                                <div class="spacer"></div>
+                                <div class="extension-actions">
+                                    <button class="btn-outline toggle-btn" onclick="toggleExtension('ext-youtube')">
+                                        <i data-lucide="info" class="icon-sm"></i>
+                                        <span class="btn-text">איך זה עובד?</span>
+                                    </button>
+                                    <a href="https://chromewebstore.google.com/detail/youtube-to-notebooklm/kobncfkmjelbefaoohoblamnbackjggk" target="_blank" class="btn-primary">
+                                        <span>התקנה מהירה</span>
+                                        <i data-lucide="external-link" class="icon-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extension-details">
+                        <div class="details-grid">
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="check-circle-2" class="icon-md text-fuchsia"></i> מהות הכלי</h4>
+                                    <p>התוסף הזה הופך את יוטיוב למקור מידע נגיש. הוא מאפשר לשלוח סרטונים בודדים, פלייליסטים שלמים או ערוצים ישירות ל-NotebookLM לצורך סיכום וניתוח.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="zap" class="icon-md text-fuchsia"></i> איך משתמשים?</h4>
+                                    <p>צופים בהרצאה? לחצו על כפתור התוסף שנוסף ליוטיוב, והסרטון יהפוך לטקסט נגיש במחברת שלכם תוך שניות.</p>
+                                </div>
+                            </div>
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="help-circle" class="icon-md text-fuchsia"></i> הערך המוסף</h4>
+                                    <p>מאפשר ללמוד מסרטונים בצורה אקטיבית - לשאול שאלות על הנאמר ולקבל סיכומים מדויקים בלי לצפות שוב ושוב.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="target" class="icon-md text-fuchsia"></i> קהל יעד</h4>
+                                    <p>מי שלומד מקורסים מקוונים, הדרכות או הרצאות בווידאו ורוצה להפיק מהם תובנות כתובות.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extension 3: Bookshelf -->
+                <div class="organic-card extension-card" id="ext-bookshelf">
+                    <div class="extension-main">
+                        <div class="extension-icon-wrapper bg-indigo-700">
+                            <i data-lucide="chrome" class="icon-lg text-white"></i>
+                        </div>
+                        <div class="extension-content">
+                            <div class="extension-titles">
+                                <h3 class="extension-name">סדר וארגון במחברות</h3>
+                                <p class="extension-original-name">Bookshelf: Folder Manager</p>
+                            </div>
+                            <p class="extension-desc">ניהול חכם של המחברות שלכם באמצעות תיקיות וסדר ויזואלי.</p>
+                            
+                            <div class="extension-meta">
+                                <div class="badge badge-users">
+                                    <i data-lucide="users" class="icon-sm"></i>
+                                    <span>+10,000 משתמשים</span>
+                                </div>
+                                <div class="badge badge-rating">
+                                    <i data-lucide="star" class="icon-sm fill-yellow"></i>
+                                    <span>4.7</span>
+                                </div>
+                                <div class="spacer"></div>
+                                <div class="extension-actions">
+                                    <button class="btn-outline toggle-btn" onclick="toggleExtension('ext-bookshelf')">
+                                        <i data-lucide="info" class="icon-sm"></i>
+                                        <span class="btn-text">איך זה עובד?</span>
+                                    </button>
+                                    <a href="https://chromewebstore.google.com/detail/bookshelf-folder-manager/ibjbgddbhlcookmdhehgljaneccjidik" target="_blank" class="btn-primary">
+                                        <span>התקנה מהירה</span>
+                                        <i data-lucide="external-link" class="icon-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extension-details">
+                        <div class="details-grid">
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="check-circle-2" class="icon-md text-fuchsia"></i> מהות הכלי</h4>
+                                    <p>מוסיף יכולת ניהול תיקיות (Bookshelves) ל-NotebookLM. מאפשר לארגן עשרות מחברות לפי פרויקטים, נושאים או תחומי עניין בצורה אינטואיטיבית.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="zap" class="icon-md text-fuchsia"></i> איך משתמשים?</h4>
+                                    <p>צרו תיקיות כמו "עבודה", "לימודים" או "פרויקט אישי" וגררו אליהן את המחברות המתאימות.</p>
+                                </div>
+                            </div>
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="help-circle" class="icon-md text-fuchsia"></i> הערך המוסף</h4>
+                                    <p>מונע את הבלגן שנוצר כשיש עשרות מחברות בדף הבית ומקל על מציאת המידע הרלוונטי במהירות.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="target" class="icon-md text-fuchsia"></i> קהל יעד</h4>
+                                    <p>משתמשים כבדים ב-NotebookLM שמנהלים מספר רב של פרויקטים במקביל.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extension 4: Tools -->
+                <div class="organic-card extension-card" id="ext-tools">
+                    <div class="extension-main">
+                        <div class="extension-icon-wrapper bg-amber-400">
+                            <div class="tools-icon">
+                                <div class="tools-page-edge"></div>
+                                <svg viewBox="0 0 24 24" class="svg-icon stroke-orange">
+                                    <path d="M6 16c0-4 3-6 7-6h5m0 0l-3-3m3 3l-3 3" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="extension-content">
+                            <div class="extension-titles">
+                                <h3 class="extension-name">All In One Notebook</h3>
+                                <p class="extension-original-name">NotebookLM Tools</p>
+                            </div>
+                            <p class="extension-desc">תוסף All In One שמוסיף ל-NotebookLM המון יכולות שחסרות לך היום.</p>
+                            
+                            <div class="extension-meta">
+                                <div class="badge badge-users">
+                                    <i data-lucide="users" class="icon-sm"></i>
+                                    <span>+10,000 משתמשים</span>
+                                </div>
+                                <div class="badge badge-rating">
+                                    <i data-lucide="star" class="icon-sm fill-yellow"></i>
+                                    <span>4.9</span>
+                                </div>
+                                <div class="spacer"></div>
+                                <div class="extension-actions">
+                                    <button class="btn-outline toggle-btn" onclick="toggleExtension('ext-tools')">
+                                        <i data-lucide="info" class="icon-sm"></i>
+                                        <span class="btn-text">איך זה עובד?</span>
+                                    </button>
+                                    <a href="https://chromewebstore.google.com/detail/notebooklm-tools/hiibkpjljigehlnnecbgehkhfibmahjn" target="_blank" class="btn-primary">
+                                        <span>התקנה מהירה</span>
+                                        <i data-lucide="external-link" class="icon-sm"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="extension-details">
+                        <div class="details-grid">
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="check-circle-2" class="icon-md text-fuchsia"></i> מהות הכלי</h4>
+                                    <p>מוסיף ל-NotebookLM "כלי עבודה" חסרים: תיקיות למקורות בתוך מחברת, גרירה ושחרור, ייבוא מרוכז של עשרות לינקים/טאבים, ניקוי כפילויות, תגיות, פרומפטים שמורים, Dark Mode ועוד.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="zap" class="icon-md text-fuchsia"></i> איך משתמשים?</h4>
+                                    <p>פותחים את הפאנל של NotebookLM Tools בתוך המחברת, יוצרים תיקיות פנימיות (למשל "וידאו", "מסמכים"), גוררים אליהן מקורות ושומרים פרומפטים קבועים לשימוש חוזר.</p>
+                                </div>
+                            </div>
+                            <div class="details-col">
+                                <div class="detail-item">
+                                    <h4><i data-lucide="help-circle" class="icon-md text-fuchsia"></i> הערך המוסף</h4>
+                                    <p>פותר את הכאוס בניהול מקורות במחברות גדולות, מאפשר ניקוי כפילויות ושמירת פרומפטים שחוזרים על עצמם.</p>
+                                </div>
+                                <div class="detail-item">
+                                    <h4><i data-lucide="target" class="icon-md text-fuchsia"></i> קהל יעד</h4>
+                                    <p>משתמשים כבדים (Power-Users), חוקרים, סטודנטים מתקדמים וכל מי שמנהל כמות גדולה של מידע ומחברות.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section-spacing">
+            <div class="section-header">
+                <div class="bg-glow bg-fuchsia"></div>
+                <h2 class="section-title">טיפים למקצוענים</h2>
+                <p class="section-subtitle">כמה סודות קטנים שיעשו הבדל גדול בחוויית המשתמש שלכם</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Tip 1 -->
+                <div class="organic-card tip-card">
+                    <div class="tip-icon-wrapper">
+                        <i data-lucide="arrow-left-right" class="tip-icon"></i>
+                    </div>
+                    <h3 class="card-title">למה צריך את שני התוספים הראשונים?</h3>
+                    <p class="card-text">ה-Web Importer מצטיין בייבוא מהיר של מאמרים ודפי אינטרנט שלמים, בעוד שתוסף ה-YouTube מותאם ספציפית לווידאו ומאפשר ייבוא פלייליסטים וערוצים שלמים בלחיצה אחת. השילוב ביניהם מבטיח ששום מקור מידע לא יישאר בחוץ.</p>
+                </div>
+                <!-- Tip 2 -->
+                <div class="organic-card tip-card">
+                    <div class="tip-icon-wrapper">
+                        <i data-lucide="message-square" class="tip-icon"></i>
+                    </div>
+                    <h3 class="card-title">שאילתות ממוקדות</h3>
+                    <p class="card-text">במקום לבקש "סכם לי", נסו לשאול שאלות ספציפיות כמו "מה הקשר בין נושא א' לנושא ב' לפי המקורות שהעליתי?".</p>
+                </div>
+                <!-- Tip 3 -->
+                <div class="organic-card tip-card">
+                    <div class="tip-icon-wrapper">
+                        <i data-lucide="zap" class="tip-icon"></i>
+                    </div>
+                    <h3 class="card-title">שימוש מושכל בתוספים</h3>
+                    <p class="card-text">התוספים הם הקיצור שלכם להצלחה. השתמשו בהם כדי להפוך שיטוט מקרי ברשת למחקר מעמיק תוך שניות.</p>
+                </div>
+                <!-- Tip 4 -->
+                <div class="organic-card tip-card">
+                    <div class="tip-icon-wrapper">
+                        <i data-lucide="book-open" class="tip-icon"></i>
+                    </div>
+                    <h3 class="card-title">הערות אישיות (Notes)</h3>
+                    <p class="card-text">אל תשכחו שאפשר להוסיף הערות משלכם. זה עוזר למודל להבין את ההקשר האישי שלכם בתוך המחקר.</p>
+                </div>
+                <!-- Tip 5 -->
+                <div class="organic-card tip-card">
+                    <div class="tip-icon-wrapper">
+                        <i data-lucide="pencil" class="tip-icon"></i>
+                    </div>
+                    <h3 class="card-title">התאמה אישית בסטודיו</h3>
+                    <p class="card-text">לפני שאתם לוחצים על יצירת פודקאסט או מדריך, השתמשו באייקון העיפרון (עריכה). זה מאפשר לכם לתת הנחיות ספציפיות למודל, כמו "התמקד בקהל יעד של סטודנטים" או "שמור על טון הומוריסטי", ולקבל תוצר מדויק הרבה יותר.</p>
+                </div>
+                <!-- Tip 6 -->
+                <div class="organic-card tip-card">
+                    <div class="tip-icon-wrapper">
+                        <i data-lucide="globe" class="tip-icon"></i>
+                    </div>
+                    <h3 class="card-title">חיבור לג׳ימני (Gemini)</h3>
+                    <p class="card-text">חיבור המחברת לג׳ימני מאפשר לכם להשתמש ביכולות המתקדמות של המודל על בסיס המידע שלכם. יתרון אדיר הוא היכולת ליצור אתר אינטרנט שלם מהמחברת: פשוט פותחים שיחה חדשה בג'ימיני, בוחרים מצב מעמיק ו Deep research ו canvas, מעלים את המחברת ומדביקים פרומט מנצח למטרה זו</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Did You Know Section -->
+        <section class="section-spacing">
+            <div class="section-header">
+                <div class="bg-glow bg-yellow"></div>
+                <div class="icon-badge">
+                    <i data-lucide="help-circle" class="icon-lg text-yellow"></i>
+                </div>
+                <h2 class="section-title">הידעת?</h2>
+                <p class="section-subtitle">עובדות מעניינות על הכלי שישדרגו לכם את הידע והביצועים</p>
+            </div>
+
+            <div class="grid-3">
+                <!-- Fact 1 -->
+                <div class="organic-card fact-card">
+                    <div class="fact-icon-wrapper">
+                        <i data-lucide="file-text" class="fact-icon"></i>
+                    </div>
+                    <h3 class="card-title">דיוק מבוסס מקורות</h3>
+                    <p class="card-text">בכל תשובה שהמודל נותן, הוא מפנה אתכם למקור המדויק עליו הוא התבסס. כך אתם יכולים להיות בטוחים שהוא לא "ממציא" מידע (הזיות) אלא נצמד לעובדות שהעליתם.</p>
+                </div>
+                <!-- Fact 2 -->
+                <div class="organic-card fact-card">
+                    <div class="fact-icon-wrapper">
+                        <i data-lucide="zap" class="fact-icon"></i>
+                    </div>
+                    <h3 class="card-title">הגרסה החינמית חזקה במיוחד</h3>
+                    <p class="card-text">מי שיש לו מנוי לג׳ימני מקבל גם את נוטבוק LM, אבל הגרסה החינמית בהחלט מספיקה וכוללת: כ-100 מחברות, עד 50 מקורות בכל מחברת, כ-50 הודעות צ׳ט ביום, כ-3 Audio Overviews ביום וגישה מוגבלת ל-Deep Research.</p>
+                </div>
+                <!-- Fact 3 -->
+                <div class="organic-card fact-card">
+                    <div class="fact-icon-wrapper">
+                        <i data-lucide="users" class="fact-icon"></i>
+                    </div>
+                    <h3 class="card-title">שיתוף ככלי למידה</h3>
+                    <p class="card-text">ניתן לשתף מחברת עם אחרים. השיתוף יוצר מעין "בוט" אישי עבור המשתמש שקיבל את הגישה, שיענה לו על כל שאלה בהתבסס על המקורות שלכם. זהו כלי מושלם ליצירת מדריכי למידה אינטראקטיביים.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt Library Section -->
+        <section class="section-spacing">
+            <div class="section-header">
+                <div class="bg-glow bg-fuchsia"></div>
+                <div class="badge-pill">
+                    <i data-lucide="sparkles" class="icon-xs"></i>
+                    ערך מוסף: ספריית קסם
+                </div>
+                <h2 class="section-title">פרומפטים מוכנים לעבודה</h2>
+                <p class="section-subtitle">העתיקו והדביקו ב-NotebookLM כדי לקבל תוצאות מדהימות ברגע</p>
+            </div>
+
+            <div class="grid-4">
+                <!-- Prompt 1 -->
+                <div class="organic-card prompt-card">
+                    <div class="prompt-header">
+                        <div class="prompt-icon-wrapper">
+                            <i data-lucide="brain-circuit" class="icon-sm"></i>
+                        </div>
+                        <button class="copy-btn" data-prompt="זהה את הקשרים המרכזיים בין המקורות השונים שהעליתי והסבר כיצד הם משלימים אחד את השני.">
+                            <i data-lucide="copy" class="icon-sm"></i>
+                            <span class="copy-tooltip">הועתק!</span>
+                        </button>
+                    </div>
+                    <h3 class="card-title">ניתוח קשרים</h3>
+                    <p class="prompt-text">"זהה את הקשרים המרכזיים בין המקורות השונים שהעליתי והסבר כיצד הם משלימים אחד את השני."</p>
+                </div>
+                <!-- Prompt 2 -->
+                <div class="organic-card prompt-card">
+                    <div class="prompt-header">
+                        <div class="prompt-icon-wrapper">
+                            <i data-lucide="brain-circuit" class="icon-sm"></i>
+                        </div>
+                        <button class="copy-btn" data-prompt="צור בוחן אמריקאי של 5 שאלות המבוסס על המידע במחברת, כולל תשובות והסברים.">
+                            <i data-lucide="copy" class="icon-sm"></i>
+                            <span class="copy-tooltip">הועתק!</span>
+                        </button>
+                    </div>
+                    <h3 class="card-title">יצירת בוחן</h3>
+                    <p class="prompt-text">"צור בוחן אמריקאי של 5 שאלות המבוסס על המידע במחברת, כולל תשובות והסברים."</p>
+                </div>
+                <!-- Prompt 3 -->
+                <div class="organic-card prompt-card">
+                    <div class="prompt-header">
+                        <div class="prompt-icon-wrapper">
+                            <i data-lucide="brain-circuit" class="icon-sm"></i>
+                        </div>
+                        <button class="copy-btn" data-prompt="כתוב סיכום מנהלים תמציתי של כל המקורות, תוך התמקדות ב-3 התובנות החשובות ביותר.">
+                            <i data-lucide="copy" class="icon-sm"></i>
+                            <span class="copy-tooltip">הועתק!</span>
+                        </button>
+                    </div>
+                    <h3 class="card-title">סיכום מנהלים</h3>
+                    <p class="prompt-text">"כתוב סיכום מנהלים תמציתי של כל המקורות, תוך התמקדות ב-3 התובנות החשובות ביותר."</p>
+                </div>
+                <!-- Prompt 4 -->
+                <div class="organic-card prompt-card">
+                    <div class="prompt-header">
+                        <div class="prompt-icon-wrapper">
+                            <i data-lucide="brain-circuit" class="icon-sm"></i>
+                        </div>
+                        <button class="copy-btn" data-prompt="על בסיס המידע במחברת, בנה מפת דרכים (Roadmap) ליישום הרעיונות המרכזיים שהועלו.">
+                            <i data-lucide="copy" class="icon-sm"></i>
+                            <span class="copy-tooltip">הועתק!</span>
+                        </button>
+                    </div>
+                    <h3 class="card-title">מפת דרכים</h3>
+                    <p class="prompt-text">"על בסיס המידע במחברת, בנה מפת דרכים (Roadmap) ליישום הרעיונות המרכזיים שהועלו."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-line"></div>
+        <p class="footer-text">המדריך האישי שלכם ל-NotebookLM &copy; <span id="year"></span></p>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollToTop" class="scroll-top-btn" aria-label="Scroll to top">
+        <i data-lucide="arrow-up" class="icon-md"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
