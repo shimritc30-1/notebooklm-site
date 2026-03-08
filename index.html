@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>קצת יותר ל NotebookLM</title>
-    
-    <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom Styles -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Background Particles -->
     <div class="particles-container">
         <div class="particle p1"></div>
         <div class="particle p2"></div>
@@ -26,11 +21,19 @@
         <div class="particle p5"></div>
     </div>
 
-    <!-- Header -->
-    <header>
+    <nav class="top-nav">
+        <div class="top-nav-inner">
+            <a href="#top" class="top-nav-link">התחלה</a>
+            <a href="#extensions" class="top-nav-link">תוספים</a>
+            <a href="#tips" class="top-nav-link">טיפים</a>
+            <a href="#didyouknow" class="top-nav-link">הידעת</a>
+            <a href="#prompts" class="top-nav-link">פרומפטים</a>
+        </div>
+    </nav>
+
+    <header id="top">
         <div class="header-glow"></div>
-        
-        <!-- Logo -->
+
         <div class="logo-container">
             <div class="logo-glow"></div>
             <div class="logo-content">
@@ -50,7 +53,7 @@
         </div>
 
         <h1 class="main-title">קצת יותר ל NotebookLM</h1>
-        
+
         <div class="intro-card-wrapper">
             <div class="organic-card intro-card">
                 <div class="card-gradient-border"></div>
@@ -70,7 +73,6 @@
     </header>
 
     <main>
-        <!-- How to Start Section -->
         <section class="section-spacing">
             <div class="section-header">
                 <div class="bg-glow bg-fuchsia"></div>
@@ -79,7 +81,6 @@
             </div>
 
             <div class="grid-4">
-                <!-- Step 1 -->
                 <div class="organic-card step-card">
                     <div class="step-icon-wrapper">
                         <div class="step-icon-bg">
@@ -90,7 +91,7 @@
                     <h3 class="card-title">יוצרים מחברת</h3>
                     <p class="card-text">פתחו מחברת חדשה ב-NotebookLM ותנו לה שם לפרויקט.</p>
                 </div>
-                <!-- Step 2 -->
+
                 <div class="organic-card step-card">
                     <div class="step-icon-wrapper">
                         <div class="step-icon-bg">
@@ -101,7 +102,7 @@
                     <h3 class="card-title">מעלים מקורות</h3>
                     <p class="card-text">השתמשו בתוספים כדי לייבא מאמרים, סרטונים ומסמכים.</p>
                 </div>
-                <!-- Step 3 -->
+
                 <div class="organic-card step-card">
                     <div class="step-icon-wrapper">
                         <div class="step-icon-bg">
@@ -112,7 +113,7 @@
                     <h3 class="card-title">חוקרים ושואלים</h3>
                     <p class="card-text">שאלו את המודל שאלות על המידע שהעליתם וקבלו תשובות מדויקות.</p>
                 </div>
-                <!-- Step 4 -->
+
                 <div class="organic-card step-card">
                     <div class="step-icon-wrapper">
                         <div class="step-icon-bg">
@@ -126,15 +127,13 @@
             </div>
         </section>
 
-        <!-- Extensions Section -->
-        <section class="section-spacing">
+        <section id="extensions" class="section-spacing">
             <div class="extensions-header">
                 <h2 class="section-title-sm">תוספים שימושיים</h2>
                 <div class="divider"></div>
             </div>
 
             <div class="grid-1 gap-lg">
-                <!-- Extension 1: Importer -->
                 <div class="organic-card extension-card" id="ext-importer">
                     <div class="extension-main">
                         <div class="extension-icon-wrapper bg-slate-900">
@@ -146,7 +145,7 @@
                                 <p class="extension-original-name">NotebookLM Web Importer</p>
                             </div>
                             <p class="extension-desc">הופך כל דף אינטרנט או מאמר לחלק מהמחקר שלכם ברגע, בלי העתקות מיותרות.</p>
-                            
+
                             <div class="extension-meta">
                                 <div class="badge badge-users">
                                     <i data-lucide="users" class="icon-sm"></i>
@@ -196,7 +195,6 @@
                     </div>
                 </div>
 
-                <!-- Extension 2: YouTube -->
                 <div class="organic-card extension-card" id="ext-youtube">
                     <div class="extension-main">
                         <div class="extension-icon-wrapper bg-red-600">
@@ -214,7 +212,7 @@
                                 <p class="extension-original-name">YouTube to NotebookLM</p>
                             </div>
                             <p class="extension-desc">חיבור ישיר בין עולם הווידאו של יוטיוב למחברות החכמות שלכם.</p>
-                            
+
                             <div class="extension-meta">
                                 <div class="badge badge-users">
                                     <i data-lucide="users" class="icon-sm"></i>
@@ -264,7 +262,6 @@
                     </div>
                 </div>
 
-                <!-- Extension 3: Bookshelf -->
                 <div class="organic-card extension-card" id="ext-bookshelf">
                     <div class="extension-main">
                         <div class="extension-icon-wrapper bg-indigo-700">
@@ -276,7 +273,7 @@
                                 <p class="extension-original-name">Bookshelf: Folder Manager</p>
                             </div>
                             <p class="extension-desc">ניהול חכם של המחברות שלכם באמצעות תיקיות וסדר ויזואלי.</p>
-                            
+
                             <div class="extension-meta">
                                 <div class="badge badge-users">
                                     <i data-lucide="users" class="icon-sm"></i>
@@ -326,7 +323,6 @@
                     </div>
                 </div>
 
-                <!-- Extension 4: Tools -->
                 <div class="organic-card extension-card" id="ext-tools">
                     <div class="extension-main">
                         <div class="extension-icon-wrapper bg-amber-400">
@@ -343,7 +339,7 @@
                                 <p class="extension-original-name">NotebookLM Tools</p>
                             </div>
                             <p class="extension-desc">תוסף All In One שמוסיף ל-NotebookLM המון יכולות שחסרות לך היום.</p>
-                            
+
                             <div class="extension-meta">
                                 <div class="badge badge-users">
                                     <i data-lucide="users" class="icon-sm"></i>
@@ -395,8 +391,7 @@
             </div>
         </section>
 
-        <!-- Tips Section -->
-        <section class="section-spacing">
+        <section id="tips" class="section-spacing">
             <div class="section-header">
                 <div class="bg-glow bg-fuchsia"></div>
                 <h2 class="section-title">טיפים למקצוענים</h2>
@@ -404,7 +399,6 @@
             </div>
 
             <div class="grid-2">
-                <!-- Tip 1 -->
                 <div class="organic-card tip-card">
                     <div class="tip-icon-wrapper">
                         <i data-lucide="arrow-left-right" class="tip-icon"></i>
@@ -412,7 +406,7 @@
                     <h3 class="card-title">למה צריך את שני התוספים הראשונים?</h3>
                     <p class="card-text">ה-Web Importer מצטיין בייבוא מהיר של מאמרים ודפי אינטרנט שלמים, בעוד שתוסף ה-YouTube מותאם ספציפית לווידאו ומאפשר ייבוא פלייליסטים וערוצים שלמים בלחיצה אחת. השילוב ביניהם מבטיח ששום מקור מידע לא יישאר בחוץ.</p>
                 </div>
-                <!-- Tip 2 -->
+
                 <div class="organic-card tip-card">
                     <div class="tip-icon-wrapper">
                         <i data-lucide="message-square" class="tip-icon"></i>
@@ -420,7 +414,7 @@
                     <h3 class="card-title">שאילתות ממוקדות</h3>
                     <p class="card-text">במקום לבקש "סכם לי", נסו לשאול שאלות ספציפיות כמו "מה הקשר בין נושא א' לנושא ב' לפי המקורות שהעליתי?".</p>
                 </div>
-                <!-- Tip 3 -->
+
                 <div class="organic-card tip-card">
                     <div class="tip-icon-wrapper">
                         <i data-lucide="zap" class="tip-icon"></i>
@@ -428,7 +422,7 @@
                     <h3 class="card-title">שימוש מושכל בתוספים</h3>
                     <p class="card-text">התוספים הם הקיצור שלכם להצלחה. השתמשו בהם כדי להפוך שיטוט מקרי ברשת למחקר מעמיק תוך שניות.</p>
                 </div>
-                <!-- Tip 4 -->
+
                 <div class="organic-card tip-card">
                     <div class="tip-icon-wrapper">
                         <i data-lucide="book-open" class="tip-icon"></i>
@@ -436,7 +430,7 @@
                     <h3 class="card-title">הערות אישיות (Notes)</h3>
                     <p class="card-text">אל תשכחו שאפשר להוסיף הערות משלכם. זה עוזר למודל להבין את ההקשר האישי שלכם בתוך המחקר.</p>
                 </div>
-                <!-- Tip 5 -->
+
                 <div class="organic-card tip-card">
                     <div class="tip-icon-wrapper">
                         <i data-lucide="pencil" class="tip-icon"></i>
@@ -444,19 +438,18 @@
                     <h3 class="card-title">התאמה אישית בסטודיו</h3>
                     <p class="card-text">לפני שאתם לוחצים על יצירת פודקאסט או מדריך, השתמשו באייקון העיפרון (עריכה). זה מאפשר לכם לתת הנחיות ספציפיות למודל, כמו "התמקד בקהל יעד של סטודנטים" או "שמור על טון הומוריסטי", ולקבל תוצר מדויק הרבה יותר.</p>
                 </div>
-                <!-- Tip 6 -->
+
                 <div class="organic-card tip-card">
                     <div class="tip-icon-wrapper">
                         <i data-lucide="globe" class="tip-icon"></i>
                     </div>
                     <h3 class="card-title">חיבור לג׳ימני (Gemini)</h3>
-                    <p class="card-text">חיבור המחברת לג׳ימני מאפשר לכם להשתמש ביכולות המתקדמות של המודל על בסיס המידע שלכם. יתרון אדיר הוא היכולת ליצור אתר אינטרנט שלם מהמחברת: פשוט פותחים שיחה חדשה בג'ימיני, בוחרים מצב מעמיק ו Deep research ו canvas, מעלים את המחברת ומדביקים פרומט מנצח למטרה זו</p>
+                    <p class="card-text">חיבור המחברת לג׳ימני מאפשר לכם להשתמש ביכולות המתקדמות של המודל על בסיס המידע שלכם. יתרון אדיר הוא היכולת ליצור אתר אינטרנט שלם מהמחברת: פשוט פותחים שיחה חדשה בג'ימיני, בוחרים מצב מעמיק ו Deep research ו canvas, מעלים את המחברת ומדביקים פרומט מנצח למטרה זו.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Did You Know Section -->
-        <section class="section-spacing">
+        <section id="didyouknow" class="section-spacing">
             <div class="section-header">
                 <div class="bg-glow bg-yellow"></div>
                 <div class="icon-badge">
@@ -467,7 +460,6 @@
             </div>
 
             <div class="grid-3">
-                <!-- Fact 1 -->
                 <div class="organic-card fact-card">
                     <div class="fact-icon-wrapper">
                         <i data-lucide="file-text" class="fact-icon"></i>
@@ -475,7 +467,7 @@
                     <h3 class="card-title">דיוק מבוסס מקורות</h3>
                     <p class="card-text">בכל תשובה שהמודל נותן, הוא מפנה אתכם למקור המדויק עליו הוא התבסס. כך אתם יכולים להיות בטוחים שהוא לא "ממציא" מידע (הזיות) אלא נצמד לעובדות שהעליתם.</p>
                 </div>
-                <!-- Fact 2 -->
+
                 <div class="organic-card fact-card">
                     <div class="fact-icon-wrapper">
                         <i data-lucide="zap" class="fact-icon"></i>
@@ -483,7 +475,7 @@
                     <h3 class="card-title">הגרסה החינמית חזקה במיוחד</h3>
                     <p class="card-text">מי שיש לו מנוי לג׳ימני מקבל גם את נוטבוק LM, אבל הגרסה החינמית בהחלט מספיקה וכוללת: כ-100 מחברות, עד 50 מקורות בכל מחברת, כ-50 הודעות צ׳ט ביום, כ-3 Audio Overviews ביום וגישה מוגבלת ל-Deep Research.</p>
                 </div>
-                <!-- Fact 3 -->
+
                 <div class="organic-card fact-card">
                     <div class="fact-icon-wrapper">
                         <i data-lucide="users" class="fact-icon"></i>
@@ -494,8 +486,7 @@
             </div>
         </section>
 
-        <!-- Prompt Library Section -->
-        <section class="section-spacing">
+        <section id="prompts" class="section-spacing">
             <div class="section-header">
                 <div class="bg-glow bg-fuchsia"></div>
                 <div class="badge-pill">
@@ -507,7 +498,6 @@
             </div>
 
             <div class="grid-4">
-                <!-- Prompt 1 -->
                 <div class="organic-card prompt-card">
                     <div class="prompt-header">
                         <div class="prompt-icon-wrapper">
@@ -521,7 +511,7 @@
                     <h3 class="card-title">ניתוח קשרים</h3>
                     <p class="prompt-text">"זהה את הקשרים המרכזיים בין המקורות השונים שהעליתי והסבר כיצד הם משלימים אחד את השני."</p>
                 </div>
-                <!-- Prompt 2 -->
+
                 <div class="organic-card prompt-card">
                     <div class="prompt-header">
                         <div class="prompt-icon-wrapper">
@@ -535,7 +525,7 @@
                     <h3 class="card-title">יצירת בוחן</h3>
                     <p class="prompt-text">"צור בוחן אמריקאי של 5 שאלות המבוסס על המידע במחברת, כולל תשובות והסברים."</p>
                 </div>
-                <!-- Prompt 3 -->
+
                 <div class="organic-card prompt-card">
                     <div class="prompt-header">
                         <div class="prompt-icon-wrapper">
@@ -549,7 +539,7 @@
                     <h3 class="card-title">סיכום מנהלים</h3>
                     <p class="prompt-text">"כתוב סיכום מנהלים תמציתי של כל המקורות, תוך התמקדות ב-3 התובנות החשובות ביותר."</p>
                 </div>
-                <!-- Prompt 4 -->
+
                 <div class="organic-card prompt-card">
                     <div class="prompt-header">
                         <div class="prompt-icon-wrapper">
@@ -567,19 +557,16 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-line"></div>
         <p class="footer-text">המדריך האישי שלכם ל-NotebookLM &copy; <span id="year"></span></p>
         <p class="footer-rights">© כל הזכויות שמורות ל Shimrit Cohen Shay</p>
     </footer>
 
-    <!-- Scroll to Top -->
     <button id="scrollToTop" class="scroll-top-btn" aria-label="Scroll to top">
         <i data-lucide="arrow-up" class="icon-md"></i>
     </button>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
