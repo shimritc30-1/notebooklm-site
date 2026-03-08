@@ -1072,3 +1072,11 @@ footer {
     background: #fef9c3;
     border-radius: 0.125rem;
 }
+
+.footer-rights {
+    margin-top: 0.85rem;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
