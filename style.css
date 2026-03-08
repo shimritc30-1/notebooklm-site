@@ -1084,3 +1084,303 @@ footer {
     background: #fef9c3;
     border-radius: 0.125rem;
 }
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        background:
+            radial-gradient(circle at 50% 0%, rgba(184, 79, 255, 0.30) 0%, rgba(184, 79, 255, 0.18) 18%, rgba(184, 79, 255, 0.08) 34%, transparent 54%),
+            linear-gradient(180deg, #56197a 0%, #3b0f56 20%, #240a35 45%, #120717 74%, #050505 100%);
+        background-attachment: scroll;
+    }
+
+    header {
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        padding-left: 0.9rem;
+        padding-right: 0.9rem;
+    }
+
+    main {
+        padding: 0 0.9rem 5rem 0.9rem;
+        gap: 4rem;
+    }
+
+    .logo-container {
+        margin-bottom: 1.25rem;
+    }
+
+    .logo-content {
+        gap: 0.65rem;
+    }
+
+    .logo-icon-wrapper {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.95rem;
+    }
+
+    .logo-icon {
+        width: 1.45rem;
+        height: 1.45rem;
+    }
+
+    .sparkle-icon {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+    .logo-divider {
+        height: 1.9rem;
+    }
+
+    .logo-name {
+        font-size: 1.9rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.58rem;
+        letter-spacing: 1.6px;
+    }
+
+    .main-title {
+        font-size: 3.1rem;
+        line-height: 1.05;
+        margin-top: 2.2rem;
+        margin-bottom: 1.8rem;
+        padding: 0 0.2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.65;
+        padding: 0 0.2rem;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+        line-height: 1.15;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .section-title-sm {
+        font-size: 1.6rem;
+        white-space: normal;
+    }
+
+    .extensions-header {
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+    .organic-card {
+        border-radius: 1.2rem;
+    }
+
+    .organic-card:hover {
+        transform: translateY(-4px) scale(1.01);
+    }
+
+    .intro-card,
+    .tip-card,
+    .fact-card,
+    .prompt-card,
+    .step-card {
+        padding: 1.35rem;
+    }
+
+    .extension-main {
+        padding: 1.4rem;
+        gap: 1.2rem;
+    }
+
+    .intro-title {
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .card-title {
+        font-size: 1.08rem;
+        line-height: 1.35;
+    }
+
+    .card-text,
+    .prompt-text,
+    .extension-desc,
+    .detail-item p {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .extension-name {
+        font-size: 1.3rem;
+        line-height: 1.3;
+    }
+
+    .extension-original-name {
+        font-size: 0.98rem;
+    }
+
+    .extension-meta {
+        gap: 0.8rem;
+    }
+
+    .extension-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .btn-outline,
+    .btn-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1rem;
+    }
+
+    .badge {
+        font-size: 0.78rem;
+    }
+
+    .details-grid {
+        padding: 1.4rem;
+        gap: 1.6rem;
+    }
+
+    .detail-item h4 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .grid-4,
+    .grid-3,
+    .grid-2,
+    .grid-1 {
+        gap: 1rem;
+    }
+
+    footer {
+        padding: 3.5rem 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.72rem;
+        line-height: 1.7;
+        letter-spacing: 0.07em;
+    }
+
+    .footer-rights {
+        font-size: 0.7rem;
+        line-height: 1.6;
+        padding: 0 0.5rem;
+    }
+
+    .scroll-top-btn {
+        bottom: 1rem;
+        left: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-content {
+        gap: 0.5rem;
+    }
+
+    .logo-icon-wrapper {
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+
+    .logo-icon {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    .logo-divider {
+        height: 1.6rem;
+        margin: 0 0.1rem;
+    }
+
+    .logo-name {
+        font-size: 1.65rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.5rem;
+        letter-spacing: 1.3px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+        margin-top: 1.8rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.65rem;
+    }
+
+    .section-title-sm {
+        font-size: 1.35rem;
+    }
+
+    .intro-card,
+    .tip-card,
+    .fact-card,
+    .prompt-card,
+    .step-card,
+    .extension-main {
+        padding: 1.1rem;
+    }
+
+    .intro-text,
+    .card-text,
+    .prompt-text,
+    .extension-desc,
+    .detail-item p {
+        font-size: 0.9rem;
+    }
+
+    .step-number {
+        width: 2.1rem;
+        height: 2.1rem;
+        font-size: 0.9rem;
+    }
+
+    .step-icon-bg {
+        width: 4.2rem;
+        height: 4.2rem;
+    }
+
+    .extension-icon-wrapper {
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 1.1rem;
+    }
+
+    .badge-pill {
+        font-size: 0.76rem;
+        padding: 0.45rem 0.9rem;
+    }
+
+    .copy-btn {
+        padding: 0.55rem;
+    }
+}
